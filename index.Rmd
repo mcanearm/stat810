@@ -1,0 +1,53 @@
+---
+title: "STATS 810 (Fall 2024)"
+---
+
+###  Literature Proseminar, Including Discussions on Responsible Conduct in Research and Scholarship
+ 
+### Instructor: Edward Ionides 
+
+### [Syllabus](syllabus.html) 
+
+### Homework assignment and class notes
+
+* [Class 1. Introduction to RCRS](first-class.html)
+
+* [Homework 1. Building and maintaining healthy mentor/mentee relationships](hw01.pdf).
+
+
+* [Homework 2. Publication and peer review](hw02.pdf).
+
+* [Homework 3. Academic misconduct](hw03.pdf). 
+
+* [Homework 4. Data and the reproducibility of research results](hw04.pdf).
+
+* [Homework 5. Conflicts of interest and conflicts of commitment](hw05.pdf).
+
+* [Homework 6. Collaborative research & Human participants and animal subjects](hw06.pdf).
+
+* [Homework 7. Negligence, mistakes & how to avoid them](hw07.pdf).
+
+* [Homework 8. Internet repositories for collaboration and open-source research: git and GitHub](hw08.html).
+
+* [Homework 9. Linux and the open source software movement](hw09.pdf). Sample [.bash_profile](sample.bash_profile) taken from my Mac laptop
+
+* [Homework 10. Parallel statistical computing](hw10.pdf).
+
+* [Homework 11. Statistical computing on greatlakes](hw11.pdf).
+
+    + [Introductory notes on command-line usage of greatlakes](gl/slides.pdf).
+
+* No homework for the final week. The last class will be a capstone discussion of a recent paper from my group. We will focus on how issues discussed during the semester apply to this work: collaboration, coauthorship, peer review and publication, evaluating correctness, ethical decision-making, reproducibility, statistical computing. The paper under discussion is at https://arxiv.org/abs/2407.03085, and you are welcome to study it, though I'll start the class with a presentation of the main ideas: [slides posted](class14slides.pdf).
+
+<!--
+* [Homework 12. A workflow for reproducible statistical research: combining Latex and R with knitr](hw12.pdf).
+
+    + [Debugging hints for homework 12](hw12supp.html).
+
+
+
+-->
+
+------------
+
+-----------
