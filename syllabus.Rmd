@@ -37,7 +37,7 @@ entries <- c(
 "Linux and the open source software movement.",
 "Parallel statistical computing.",
 "Statistical computing on greatlakes using CPUs.",
-"Statistical computing on greatlakes using CPUs."
+"Statistical computing on greatlakes using GPUs."
 )
 
 date.offsets <- (0:(length(entries)-1) )*7
