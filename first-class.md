@@ -78,11 +78,13 @@ ChatGPT gives good general advice. But it does not tell us concretely how to mak
 
 * 2 minutes for a question or comment relevant to the class topic.
 
-    + How have you previously balanced time between different demands (e.g., class work and research)?
+* For this class,
 
-    + Have you previously had to think about issues related to responsible conduct in research and scholarship? In what context? 
-    
-* Start with an introduction.
+    + Say your name (as you wish to be called) and your home town.
+
+    + Summarize what (if anything) you use AI for.
+
+    + What do you view as the main dangers and opportunites for AI in the context of education, research and practice in the field of statistics?
 
 <br>
 
