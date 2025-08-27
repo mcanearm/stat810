@@ -10,11 +10,11 @@ title: "STATS 810 (Fall 2025)"
 
 ### Homework assignment and class notes
 
-* [Class 1. Introduction to RCRS](first-class.html)
+* [Class 1. Introduction to RCRS](first-class.html).
 
-<!--
 * [Homework 1. Building and maintaining healthy mentor/mentee relationships](hw01.pdf).
 
+<!--
 
 * [Homework 2. Publication and peer review](hw02.pdf).
 
