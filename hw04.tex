@@ -1,5 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage{fullpage,hyperref}\setlength{\parskip}{3mm}\setlength{\parindent}{0mm}
+
 \begin{document}
 
 \begin{center}\bf
@@ -13,16 +14,20 @@ Read pages 8--11 of {\em On Being a Scientist} and \url{https://en.wikipedia.org
 
 \item National Institutes of Health (NIH) and National Science Foundation (NSF) require data sharing for research that they fund (excluding infringement of privacy considerations or other individual rights). To what extent do you suspect their rules on data sharing are enforced?
 
-YOUR ANSWER HERE
+I believe that data sharing is enforced quite loosely across projects. There are lots of reasons for this, but I think a principal one is that, on average, 
+it's difficult to store data systematically. I suspect that a large amount of scientific data is floating around in folders on various hard drives and cloud services, rather than stored with a specific schema, in a database somewhere.
 
 \item As an academic statistician, you may have the opportunity to work with private data that cannot be shared. What are the advantages and disadvantages of working with unshareable data?
   
-YOUR ANSWER HERE
-  
+The most obvious one is the sensitivity and overall risk of having the data. You now have a responsibility to not leak this data, and so having it on your computer makes your computer "hot" in a sense. Now, if it gets lost, it can be a REALLY big deal, depending on the sensitivity of the data.
 
+The advantage is that often, private datasets are private because they are impactful; you have a chance to work with data that directly affects people 
+or institutions, and your findings may be of direct relevance in a way that public datasets cannot give. Selfishly, you may also not have to worry so much about other researchers scooping your ideas.
+  
 \item Advanced statistical methods often require sophisticated computational implementations. Should statistical researchers be expected to make their code publicly available (e.g., on GitHub) when they publish results generated using this code?
 
-YOUR ANSWER HERE
+Yes and no. Publicly available code is one thing, but everyone deciding that a single company owned by Microsoft should be the place where this happens is 
+quite another. I believe there could be space for a public interest code sharing and collaboration alternative to Github. Maybe we could all move to \href{https://codeberg.org/}{Codeberg}.
 
 \end{enumerate}
 The remaining questions consider the following hypothetical case study:
@@ -35,17 +40,28 @@ Ben has checked and rechecked the code very carefully, and cannot find any error
 He asks Gemini to review the code, but that also does not find an error.
 He decides that there must be some weird numerical effect, perhaps to do with occasional extremely large or small numbers.
 Ben decides to report the results only in the region of the parameter space where the code never crashed. 
+
 \begin{enumerate}\setcounter{enumi}{3}
 \item Is Ben's course of action a reasonable balance between the necessity to make progress on his thesis and his desire to report correct results? 
 
-YOUR ANSWER HERE
+No, but I don't think it's a cardinal sin. In Ben's case, there are principled ways to deal with this, like adding a small amount of noise to prevent zeros. 
+Completely ignoring these things is not kosher, however, I think a relatively easy solution exists - if 
+Ben doesn't fix the issue, it's worth mentioning in the paper that the issue exists and exploring further. But "weird numerical effect" isn't
+really a good enough reason to only report on certain parameter values alone.
 
 \item What are the `data' in this example? What is `reproducibility' in this context?
 
-YOUR ANSWER HERE
+I think the "data" here are the actual code, and reproducibility means the ability to actually run the code and get the same results back. That 
+might mean storing/setting seeds. It's tempting to say that you could just store the simulation outputs, but I think that undermines reproducibility 
+somewhat, since researchers should be able to re-create your study end to end, not just trust that you did your simulations correctly.
 
 \item Ben asks your opinion on how to proceed. What is your advice?
 
-YOUR ANSWER HERE
+You need to run your code with a debugger, and step through it, live, line by line, during a failed execution. If it happens randomly, you can still
+walk backwards through your code from the point of failure and play around with the particular values.
+
+Kind of no matter what, you can't just throw out the part of the parameter space that's inconvenient. You need to either fix the issue in your code 
+(a debugger makes this easier than it may seem) or do some refactoring and code cleanup and testing to really figure out what's going on. Last thing, if you
+really can't figure it out, talk to your professor and work out how to address the issue openly in your paper and thesis as an area for future work.
 \end{enumerate}
 \end{document}
