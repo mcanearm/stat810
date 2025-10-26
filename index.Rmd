@@ -24,10 +24,10 @@ title: "STATS 810 (Fall 2025)"
 
 * [Homework 6. Collaborative research & Human participants and animal subjects](hw06.pdf).
 
-<!--
 
 * [Homework 7. Negligence, mistakes & how to avoid them](hw07.pdf).
 
+<!--
 * [Homework 8. Internet repositories for collaboration and open-source research: git and GitHub](hw08.html).
 
 * [Homework 9. Linux and the open source software movement](hw09.pdf). Sample [.bash_profile](sample.bash_profile) taken from my Mac laptop
