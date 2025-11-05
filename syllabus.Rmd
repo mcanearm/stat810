@@ -33,8 +33,8 @@ entries <- c(
 "Collaborative research; human participants \\& animal subjects. _[pp.\ 24-28, 39-42, 48-49]_",
 "Negligence, mistakes \\& how to avoid them. _[pp. 12--14]_",
 "Engendering respectful communities",
+"Linux, the command line, and the open source software movement.",
 "Internet repositories for collaboration and open-source research: git and GitHub.",
-"Linux and the open source software movement.",
 "Parallel statistical computing.",
 "Statistical computing on greatlakes using CPUs.",
 "Statistical computing on greatlakes using GPUs."
