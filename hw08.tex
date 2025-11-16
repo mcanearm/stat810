@@ -19,14 +19,16 @@ Write brief answers to the following questions, by editing the tex file availabl
 
 \item Linux, R and Python are all open source and free. 
 
-(a) How do you think these projects led to high quality products given that the  usual financial incentives for building, coordinating and running a development team are missing?
+(a) How do you think these projects led to high quality products given that the usual financial incentives for building, coordinating and running a development team are missing?
 
-YOUR ANSWER HERE.
+I believe it is because open source software allows for higher-quality and more trustworthy software than closed source counterparts, on average. It's incredibly difficult to hide bugs when literally anyone can see the code, and so this leads to very rapid and thorough development that you simply can't get with closed source software.
+
+The Linux kernel is interesting because despite being relatively rare for single user setups, it's the most common server language, most likely because it is either free or freemium (dedicated support on a free kernel, as in Redhat Linux).
 
 (b) If developers are interested in making money, can they do this by writing open-source software? If so, how? If not, why do they do it?
 
-YOUR ANSWER HERE.
-  
+Yes, they absolutely can. Many developers offer services outside of the actual code to make this work, like the PyMC devs who also have a consulting business on the side, or RStudio developers who provide online infrastructure via Posit Cloud. Still, you won't make as much money writing the software itself; in contrast to SAS or SPSS, for example, which make profits from licenses you have to provide services or completementary stuff to the open source commnunity, and generally if you're selling the software itself, no one will want to contribute for free.
+
 \item To what extent do you agree or disagree with the opinions at
 \url{https://valohai.com/blog/command-line-for-data-science/}?
 Specifically,
@@ -35,8 +37,9 @@ Specifically,
 
 (ii) Five reasons why command line use is critical for data science: speed, agnosticism, automation, extensibility, lack of other options.
 
+For (i), I generally agree with this. For professional data scientists, Windows is typically not common in a professional setting, though it is more common than Linux. However, server environments are almost totally Linux, including basically all cloud providers. Data scientists generally need to be able to run programs on commodity, non-specialized hardware, and using a Mac for a local development team gives you nearly drop in reproducibility on a Linux, not to mention in-built SSH. Windows, instead, required PuTTy for a long time, though the Linux subkernel (sub-system) has mitigated this advantage.
 
-YOUR ANSWER HERE.
+Arguably, a wider and more inclusive view of Data science would include more Windows users, but the vast majority of the DS ecosystem is built around Unix commands.
 
 \item  Unless you vigorously disagree with the assertions in Question 2, if you have not yet had much experience working with the command line, you should be motivated to change that! The instructor of this course endorses the value of working with the command line, so even if you are deeply skeptical about the value of learning the ancient art of command line computing, please put that to one side for the rest of the course.
 
@@ -58,13 +61,21 @@ Optionally, if you find it an effective way to practice, play the terminus adven
 
 Report briefly on what you have learned.
 
-YOUR ANSWER HERE.
+I'm relatively experienced, and have skipped this.
 
 \item If you are a relatively experienced Linux user, share some words of advice for beginners. How and why did you get started with Linux?  
 
-YOUR ANSWER HERE.
+I got started with Linux at my first job as a Data Scientist; 90\% of what I did from day to day was listing files in a directory, moving files from folder to folder or directing output to places. In a second job, it became a regular part of my "data plumbing," and I eventually became the AWS administrator for a team of about 6 data scientists 2 or 3 data engineers, which required keeping track of daily data loads, automated SQL queries, dealing with logfiles, monitoring process outputs, and data synchronization from our on-prem environment to AWS S3, Redshift, and RDS.
 
-Optionally, you can also use this opportunity to learn some more Linux-related skills, e.g., from the Linux intermediate tutorials at
+It's fantastic for automation, since several Linux utilities like `cron` allow you write your own programs on a schedule. Linux comfort is not necessarily as fundamental to researchers because you typically aren't building a "machine" in the same sense, or a product. It's handy to know, but I think it really shines when you have to support a product, teammates, or other teams in a larger organization.
+
+The most important thing in terms of Linux is to learn the stuff that makes your life easier, but try to never use `sudo` when you don't have to. Having to use `sudo` regularly is a sign of a mis-managed environment, and in fact, as a novice user, you shouldn't even be able to use `sudo` anyway. Linux command line is important, but just as important is getting really familiar with file structures and programs, how SSH works, and the nuts of bolts of working on a shared environment.
+
+Next, don't be afraid to write small programs in Python, but use them on the command line. There's fast and easy ways to do things, but you can write programs in Python and use system args to interoperate bash and Python processes seamlessly. Same goes for R, but frankly, Python is just easier to use in a Unix/server environment and if you use R in an industry context, the people in charge of supporting you are going to hate it.
+
+Lastly, my biggest mistakes always came from inappropriately changing file permissions. Don't do it if you can avoid it. Also, you can actually ruin your life really quickly with `sudo rm {path} -rf` (I hate even typing it). You have to be extremely careful with Linux commands in the Spiderman sense - with great power comes great responsibility. 
+
+% Optionally, you can also use this opportunity to learn some more Linux-related skills, e.g., from the Linux intermediate tutorials at
 
 \url{https://www.linux.org/forums/linux-intermediate-tutorials.124/}
 
