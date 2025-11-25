@@ -24,6 +24,6 @@ x2.block_until_ready()
 end_run = time.time()
 run_time = end_run - start_run
 
-print(f"First run time: {compilation_time:.2f} seconds")
-print(f"Second run time: {run_time:.2f} seconds")
+print(f"First run time: {compilation_time:.4f} seconds")
+print(f"Second run time: {run_time:.4f} seconds")
 
