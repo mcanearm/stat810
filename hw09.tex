@@ -17,13 +17,18 @@ Write brief answers to the following questions, by editing the tex file availabl
 
 \item Some key terms for parallel computing are: process, thread, core, node. Briefly define these in your own words.
 
-YOUR ANSWER HERE.
-  
+\begin{itemize}
+    \item Process - A running program with the ability to request and read objects from a memory space
+    \item Thread - A sub-routine only with access to the parent process's memory space
+    \item Core - A computational unit which can handle a single process's instructions at once, through processes may put instructions onto a single CPU; I \textit{think} a core corresponds to a heap/stack.
+    \item Node - generally, an entire separate server in a cluster; can be virtualized or physical, but corresponds to a grouping of RAM, CPU, and disk for processes
+\end{itemize}
+
 \item What common statistical computing tasks are {\bf embarassingly parallel}? For the definition of this technical term, see
 
   \url{https://en.wikipedia.org/wiki/Embarrassingly_parallel} 
 
-YOUR ANSWER HERE.
+Bootstrapping, cross validation, simulation, some aspects of matrix multiplication
 
 \item A basic tool for embarassingly parallel computing in R is \texttt{foreach} set up using the \texttt{doParallel} library. Run the following R codes for generating $10^8$ standard normal random variables, on your laptop or some other machine. Explain the relative speeds. The ``elapsed'' component of the run time is the total time, in seconds, and is the primary outcome of interest. If you like, you can read more about foreach at
   
@@ -56,21 +61,23 @@ YOUR ANSWER HERE.
   rbind(time0,time1,time2,time3,time4)
 \end{verbatim}
 
-  YOUR ANSWER HERE.
+The tradeoff in each of these is between the division of tasks across CPUs and the number of cycles done completely in a single process. For some reason (which is unclear to me) dividing 10e3 tasks of 10e5 draws from a normal is "optimal" balance between fast work on one process and communication on another. 
+
+R is strictly process based without the ability to support threading, so it incurs significant overhead when managing processes. Therefore, the amount of work on each process must be enough to "saturate" the process in a sense, without doing too much communication across processes.
 
 \item Once you are using multicore computing on your laptop or desktop, the next step for additional computing resources is greatlakes:\\
   \url{https://its.umich.edu/advanced-research-computing/high-performance-computing/great-lakes}\\
 which we will use later. Previous experience with cluster computing in this group is expected to range from novice to expert: briefly describe any previous experience you have had with computing on a cluster.
 
-  YOUR ANSWER HERE.
+I have experience doing some "manual" cluster management with R's PSOCK clusters and utilizing Slurm for batch jobs. I have also written jobs in Hadoop on AWS's EMR service.
 
 \item Parallel computing for large-scale datasets was pioneered by Hadoop with MapReduce, with a currently popular implementation being Apache Spark (\url{https://en.wikipedia.org/wiki/Apache_Spark}). Is Spark appropriate for only embarrassingly parallel algorithms?
 
-  YOUR ANSWER HERE.
+No; Spark generally enables lazy computation and is utilized for very large datasets. Even things are not embarrassingly parallel can be parallelized across sharding of data, so things like joins and data movement can be done in parallel by utilizing metadata.
 
 \item Graphical processing unit (GPU) hardware can pack $10^4$ cores in a single GPU, offering the possibility of massive acceleration. Have you ever written code for a GPU? What statistical computing tasks are well suited to GPUs?
 
-  YOUR ANSWER HERE.
+Sort of. I have never written CUDA code, but I have utilized a GPU (often) with JAX + Numpyro for sampling Bayesian models. In general, the speedup is negligible except in cases with large amounts of matrix multiplication. Again, significant overhead is incurred by moving data on and off the GPU, so for relatively simple problems, it's actualyl much slower.
 
 \end{enumerate}
 \end{document}
